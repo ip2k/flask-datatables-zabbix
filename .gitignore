@@ -1,0 +1,6 @@
+workspace.xml
+tasks.xml
+.coverage
+*.pyc
+.idea/
+ghostdriver.log
