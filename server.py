@@ -8,7 +8,7 @@ def get_hosts():
     pz = pyzabbix.ZabbixAPI(server='https://your-zabbix-server')
     pz.login('username', 'password')
     hosts = pz.host.get(output='extend', selectGroups='extend', selectInterfaces='extend')
-    return jsonify(data=hosts)
+    return jsonify(data=hosts)  # this puts everything inside a { 'data': [...], [...] } in the response so DataTables can deal with it
 
 @app.route('/')
 def index():
